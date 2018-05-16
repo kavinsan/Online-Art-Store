@@ -1,0 +1,87 @@
+
+CREATE TABLE artworks( name VARCHAR(30) NOT NULL, description VARCHAR(50) NOT NULL, price FLOAT NOT NULL, artist VARCHAR(30) NOT NULL, date_produced VARCHAR(30) NOT NULL, dimensions VARCHAR(30) NOT NULL, location VARCHAR(50) NOT NULL, genre VARCHAR(30) NOT NULL, image_src VARCHAR(255) NOT NULL, name_link VARCHAR(100) NOT NULL, artwork_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY);
+
+
+INSERT INTO artworks VALUE ('Guernica', 'Oil painting', 500.00, 'Pablo Picasso', '1937', '349.3cm x 776.6cm', 'Museo Reina Sofia, Madrid, Spain', 'Allegorical', 'https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg', 'detailed.php?artworkID=1', NULL);
+
+
+INSERT INTO artworks VALUE ('Mona Lisa', 'Oil on poplar panel', 1000.00, 'Leonardo da Vinci', 'c. 1503-06', '77 cm x 53 cm', 'Musee du Louvre, Paris', 'Renaissance', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg', 'detailed.php?artworkID=2', NULL);
+
+
+INSERT INTO artworks VALUE ('Starry Night', 'Oil on canvas', 800.00, 'Vincent van Gogh', '1889', '73.7 cm x 92.1 cm', 'Museum of Modern Art, New York City', 'Post-Impressionism, Modern art', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/600px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', 'detailed.php?artworkID=3', NULL);
+
+
+INSERT INTO artworks VALUE ('The Birth of Venus', 'Oil on canvas', 600, 'Sandro Botticelli', '1484-1486', '1.72 m x 2.78 m', 'Uffizi Gallery, Florence, Italy', 'Renaissance', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/900px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg', 'detailed.php?artworkID=4', NULL);
+
+
+INSERT INTO artworks VALUE ('The Scream', 'Oil, tempera, pastels and crayon on cardboard', 900.00, 'Edvard Munch', '1893', '91 cm × 73.5 cm', 'National Gallery, Oslo, Norway', 'Expressionism', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_Scream.jpg/440px-The_Scream.jpg', 'detailed.php?artworkID=5', NULL);
+
+
+INSERT INTO artworks VALUE ('The Water-Lily Pond', 'Oil on canvas', 700.00, 'Claude Monet', '1899', '88.3 cm x 93.1 cm', 'National Gallery, London', 'Impressionism', 'https://images.metmuseum.org/CRDImages/ep/web-large/DT1854.jpg', 'detailed.php?artworkID=6', NULL);
+
+
+
+
+CREATE TABLE artists( 
+name VARCHAR(30) NOT NULL, 
+date VARCHAR(50) NOT NULL, 
+location VARCHAR(50) NOT NULL, 
+genres VARCHAR(50) NOT NULL, 
+famous_pieces VARCHAR(255) NOT NULL, 
+image_src VARCHAR(255) NOT NULL, 
+name_link VARCHAR(100) NOT NULL, 
+artist_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY);
+
+
+INSERT INTO artists VALUE ('Claude Monet', '(November 14, 1840 - December 5, 1926)', 'France', 'Founder of French Impressionism', 'Impression, Sunrise*Rouen Cathedral series*London Parliament series*Water Lilies*Haystacks*Poplars', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Claude_Monet_1899_Nadar_crop.jpg/440px-Claude_Monet_1899_Nadar_crop.jpg', 'detailed.php?artistID=1', NULL);
+
+
+INSERT INTO artists VALUE ('Edvard Munch', '(December 12, 1863 - January 23, 1944)', 'Norway', 'Symbolism, Expressionism', 'The Scream*Madonna*The Sick Child', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Portrett_av_Edvard_Munch_%28cropped%29.jpg/440px-Portrett_av_Edvard_Munch_%28cropped%29.jpg', 'detailed.php?artistID=2', NULL);
+
+
+INSERT INTO artists VALUE ('Leonardo da Vinci', '(April 15 1452 - May 2 1519)', 'Republic of Florence (Italy) and France', 'High Renaissance', 'Mona Lisa*The Last Supper*The Vitruvian Man*Lady with an Ermine', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Francesco_Melzi_-_Portrait_of_Leonardo_-_WGA14795.jpg/440px-Francesco_Melzi_-_Portrait_of_Leonardo_-_WGA14795.jpg', 'detailed.php?artistID=3', NULL);
+
+
+INSERT INTO artists VALUE ('Pablo Picasso', '(October 25, 1881 - April 8, 1973)', 'Spain and France', 'Cubism, Surrealism', 'La Vie*Family of Saltimbanques*Les Demoiselles d\'Avignon*Portrait of Daniel-Henry Kahnweiler*Girl before a Mirror*La Reve*Guernica*The Weeping Woman', 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Portrait_de_Picasso%2C_1908.jpg', 'detailed.php?artistID=4', NULL);
+
+
+INSERT INTO artists VALUE ('Sandro Botticelli', '(c. 1445 - May 17, 1510)', 'Republic of Florence (Italy)', 'Early Italian Renaissance', 'Primavera*The Birth of Venus*The Adoration of the Magi', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sandro_Botticelli_083.jpg/440px-Sandro_Botticelli_083.jpg', 'detailed.php?artistID=5', NULL);
+
+
+INSERT INTO artists VALUE ('Vincent Van Gogh', '(March 30, 1853 - July 29, 1890)', 'RNetherlands and France', 'Post-Impressionism', 'Sorrow*The Potato Eaters*Sunflowers*Bedroom in Arles*The Starry Night*Portrait of Dr. Gachet*Wheatfield with Crows', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/440px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg', 'detailed.php?artistID=6', NULL);
+
+
+CREATE TABLE museums(
+name VARCHAR(100) NOT NULL, 
+description VARCHAR(255) NOT NULL,
+date VARCHAR(50) NOT NULL,
+location VARCHAR(100) NOT NULL,
+people VARCHAR(100) NOT NULL,
+history MEDIUMTEXT NOT NULL,
+artworks VARCHAR(255) NOT NULL,
+image_src VARCHAR(255) NOT NULL,
+name_link VARCHAR(100) NOT NULL,
+museum_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY);
+
+
+INSERT INTO museums VALUE ('Musee de Louvre', 'is the world\'s largest art museum and a historic monument in Paris, France.', '1793', 'Musee du Louvre, 75001 Paris, France', 'Pierre Lescot, Hector Lefuel, Louis Visconti, Louis Le Vau', 'The history of the Louvre begins around 1190 with Philippe Auguste\'s decision to erect a fortified enclosure ot protect Paris. To defend one of the weak spots in his foritifcation, a castle was needed: as such the Louvre was born.', 'Leonardo da Vinci, Mona Lisa*Hieronymus Bosch, Ship of Fools*Caravaggio, Death of the Virgin*Jacques-Louis David, Oath of the Horatii*Leonardo da Vinci, St. John the Baptist*Leonardo da Vinci, Virgin of the Rocks*Raphael, Self-portrait with a friend', 'https://www.francetvinfo.fr/image/754twwlzh-4450/908/510/5384127.jpg', 'detailed.php?museumID=1', NULL);
+
+
+INSERT INTO museums VALUE ('Museum of Modern Art (New York)', 'MoMA has been important in developing and collecting modernist art, and is often identified as one of the largest and most influential museums of modern art in the world.', 'November 7, 1929', '11 West 53rd Street New York, NY 10019', 'Yoshio Taniguchi, Philip Goodwin, Edward Durell Stone', 'In the late 1920s, three progressive and influential patrons of the arts, Miss Lillie P. Bliss, Mrs. Cornelius J. Sullivan, and Mrs. John D. Rockefeller, Jr., perceived a need to challenge the conservative policies of traditional museums and to establish an institution devoted exclusively to modern art. They, along with additional original trustees created The Museum of Modern Art in 1929. Its founding director, Alfred H. Barr, Jr., intended the Museum to be dedicated to helping people understand and enjoy the visual arts of our time, and that it might provide New York with \“the greatest museum of modern art in the world.\”', 'Francis Bacon, Painting (1946)*Umberto Boccioni, The City Rises*Claude Monet, Water Lilies triptych*Pablo Picasso, Les Demoiselles d\'Avignon*Vincent van Gogh, The Starry Night*Andy Warhol, Campbell\'s Soup Cans', 'https://www.nycgo.com/images/venues/1069/2_sculpture_garden__x_large.jpg', 'detailed.php?museumID=2', NULL);
+
+
+INSERT INTO museums VALUE ('Museo Reina Sofia', 'Spain\'s national museum of 20th-century art.', 'September 10, 1992', 'Calle de Santa Isabel, 52, 28012 Madrid, Spain', 'Jean Nouvel, Jose de Hermosilla, Francesco Sabatini', 'Extensive modern renovations and additions to the old building were made starting in 1980. The central building of the museum was once an 18th-century hospital. The building functioned as the Centro del Arte (Art Centre) from 1986 until established as the Museo Nacional Centro de Arte Reina Sofía in 1988. In 1988, portions of the new museum were opened to the public, mostly in temporary configurations; that same year it was decreed by the Ministry of Culture as a national museum. Its architectural identity was radically changed in 1989 by Ian Ritchie with the addition of three glass circulation towers. It was officially inaugurated in 1992 and was named for the Queen Sofia.', 'Pablo Picasso, Guernica*Salvador Dali, The Great Masturbator*Richard Serra, Equal-Paralel//Guernica-Bengsai', 'https://ohfact2-cyberpanthers.netdna-ssl.com/wp-content/uploads/2017/06/Museo-Reina-Sofia.jpg', 'detailed.php?museumID=3', NULL);
+
+
+INSERT INTO museums VALUE ('National Gallery (Norway)', 'Gallery in Oslo, Norway. Since 2003 it is administratively a part of the National Museum of Art, Architecture and Design.', '1990', 'Universitetsgata 13, 0164 Oslo, Norway', 'Heinrich Ernst and Adolf Schirmer', 'The Museum of Contemporary Art was established in 1988. The foundation of its collection consisted of works transferred from Riksgalleriet (Norway’s touring art gallery) and the National Gallery. The initial set of works the museum inherited represented the official narrative of post-war Norwegian art history. In 1990 the museum opened its doors to the public in the former headquarters of Norges Bank at Bankplassen in Oslo.', 'Edvard Munch, The Scream*Edvard Munch, Madonna*Edvard Munch, The Girls on the Pier*Edvard Munch, The Sick Child*Claude Monet, Rainy Day, Etretat*Gaulli, Sacrifice of Noah', 'https://i.pinimg.com/originals/84/a8/82/84a8828d967ae8835fa51c91263edac7.jpg', 'detailed.php?museumID=4', NULL);
+
+
+INSERT INTO museums VALUE ('National Gallery (London)', 'An art museum in Trafalgar Square in the City of Westminster, in Central London. It houses a collection of over 2,300 paintings dating from the mid-13th century to 1900.', '1824', 'Trafalgar Square, London WC2N 5DN, UK', 'William Wilkins, Denise Scott Brown', 'In April 1824 the House of Commons agreed to pay £57,000 for the picture collection of the banker John Julius Angerstein. His 38 pictures were intended to form the core of a new national collection, for the enjoyment and education of all. The pictures were displayed at Angerstein\'s house at 100 Pall Mall until a dedicated gallery building was constructed.', 'Leonardo da Vinci, The Virgin of the Rocks*Vincent van Gogh, Sunflowers*Sandro Botticelli, Venus and Mars, The Mystical Nativity*Michelangelo, The Entombment', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Galer%C3%ADa_Nacional%2C_Londres%2C_Inglaterra%2C_2014-08-07%2C_DD_035.JPG/1200px-Galer%C3%ADa_Nacional%2C_Londres%2C_Inglaterra%2C_2014-08-07%2C_DD_035.JPG', 'detailed.php?museumID=5', NULL);
+
+INSERT INTO museums VALUE ('Uffizi Gallery', 'One of the most important Italian museums, and the most visited, it is also one of the largest and best known in the world, and holds a collection of priceless works, particularly from the period of the Italian Renaissance', '1581', 'Piazzale degli Uffizi, 50122 Florence, Italy', 'Giorgio Vasari, Alfonso Parigi the Elder, Bernardo Buontalenti', 'The building of Uffizi complex was begun by Giorgio Vasari in 1560 for Cosimo I de\' Medici so as to accommodate the offices of the Florentine magistrates. The construction was later continued by Alfonso Parigi and Bernardo Buontalenti; it was completed in 1581. The top floor was made into a gallery for the family and their guests and included their collection of Roman sculptures.', 'Sandro Botticelli, Primavera*Sandro Botticelli, The Birth of Venus*Leonardo da Vinci, The Annunciation*Michelangelo, The Holy Family*Andrea del Verrocchio, The Baptism of Christ', 'https://dotravel.com/uploads/ticket/1237/2017-12-05/Uffizi-Gallery-Tickets-1.jpg', 'detailed.php?museumID=6', NULL);
+
+CREATE TABLE reviews (
+reviewer_name varchar(60),
+rating varchar(5),
+review mediumtext
+)
